@@ -21,7 +21,7 @@
 <body>
   <div id="container">
     <header>
-      <h1>DVBRIS</h1>
+      <h1><img src="../images/dvbris.svg" alt="Dvbris" class="logo"></h1>
       <h2><!-- TemplateBeginEditable name="Title" -->Narrowboats and Canals<!-- TemplateEndEditable --></h2>
     </header>
     <nav><ul>
