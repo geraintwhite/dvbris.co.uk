@@ -37,7 +37,7 @@ $(function() {
   });
 
   if (!Modernizr.svg) {
-    $('.logo img').attr('src', 'images/logo.png');
+    $('.logo').attr('src', 'images/dvbris.png');
   }
 
   $(window).resize();
