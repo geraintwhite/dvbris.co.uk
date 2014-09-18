@@ -1,21 +1,35 @@
+var dropdown = 'nav li:has(ul)',
+    dropdown_ul = 'nav li ul',
+    open_class = 'open',
+    desktop_class = 'desktop',
+    breakpoint = 640,
+    anim_delay = 200;
+
+
 function isDesktop() {
-  return ($(window).width() > 640);
+  return ($(window).width() > breakpoint);
 }
+
 
 $(function() {
   $(document).click(function(e) {
     var target = $(e.target).parent();
+    var target_ul = target.children('ul');
+
     if (!isDesktop()) {
-      $('nav li:has(ul)').not(target).removeClass('open');
-      $('nav li ul').not(target.children('ul')).slideUp(200);
-      if (target.is('nav li:has(ul)')) {
-        target.toggleClass('open');
-        target.children('ul').slideToggle(200);
+      $(dropdown).not(target).removeClass(open_class);
+      $(dropdown_ul).not(target_ul).slideUp(anim_delay);
+
+      if (target.is(dropdown)) {
+        target.toggleClass(open_class);
+        target_ul.slideToggle(anim_delay);
       }
     }
   })
+
   $(window).resize(function() {
-    $('body').toggleClass('desktop', isDesktop());
+    $('body').toggleClass(desktop_class, isDesktop());
   });
+
   $(window).resize();
 });
