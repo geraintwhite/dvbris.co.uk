@@ -1,0 +1,122 @@
+$nav-width: 150px;
+$bg-colour: #505050;
+
+html { box-sizing: border-box; }
+*, *:before, *:after { box-sizing: inherit; }
+img { box-sizing: content-box; }
+
+body {
+  font-family: sans-serif;
+  background: $bg-colour url(images/bg.png) repeat-x;
+  color: #fff;
+  a {
+    color: #ababab;
+    text-decoration: none;
+    &:hover { color: #fff; }
+  }
+}
+
+#container {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+header, footer, nav, #wrapper { flex: 1 100%; }
+
+header {
+  @extend footer;
+  font-size: 1.2em;
+  h1 {
+    font-family: serif;
+    font-size: 3em;
+    color: maroon;
+    text-shadow: gold 3px 3px;
+  }
+}
+
+footer {
+  text-align: center;
+  padding: 15px;
+}
+
+nav {
+  background-color: #141414;
+  ul {
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  li {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    width: 100%;
+    ul {
+      position: relative;
+      background-color: $bg-colour;
+      display: none;
+    }
+    &:hover { background-color: #3c3c3c; }
+  }
+  a {
+    display: block;
+    padding: 10px 15px;
+    width: 100%;
+  }
+}
+
+#wrapper {
+  color: #000;
+  background-color: #fff;
+  #content { padding: 15px; }
+  a {
+    color: $bg-colour;
+    text-decoration: underline;
+    &:hover { color: black; }
+  }
+}
+
+.desktop {
+  #container {
+    min-height: 100vh;
+    max-width:  1280px;
+    margin: 0 auto;
+  }
+  header {
+    text-align: left;
+    padding-left: ($nav-width + 15);
+  }
+  nav {
+    flex: 0 $nav-width;
+    ul { text-align: left; }
+    li {
+      width: $nav-width;
+      ul {
+        top: 0;
+        left: $nav-width;
+        position: absolute;
+        display: block !important;
+        visibility: hidden;
+        transform: scaleY(0);
+        transform-origin: top;
+        transition: transform 0.2s ease;
+      }
+      &:hover ul {
+        transform: scaleY(1);
+        visibility: visible;
+      }
+    }
+  }
+  #wrapper {
+    flex: 1 0px;
+    box-shadow: #404040 0 0 100px;
+  }
+}
+
+.no-flexbox {
+  nav li ul {
+    left: 0;
+    top: auto;
+  }
+}
