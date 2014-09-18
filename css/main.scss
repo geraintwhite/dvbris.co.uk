@@ -7,7 +7,7 @@ img { box-sizing: content-box; }
 
 body {
   font-family: sans-serif;
-  background: $bg-colour url(images/bg.png) repeat-x;
+  background: $bg-colour url(../images/bg.png) repeat-x;
   color: #fff;
   a {
     color: #ababab;
@@ -64,7 +64,17 @@ nav {
       background-color: $bg-colour;
       display: none;
     }
-    &:hover { background-color: #3c3c3c; }
+    &:hover, &.dropdown.open { background-color: #3c3c3c; }
+    &.dropdown {
+      &> a:after {
+        content: 'V';
+        position: absolute;
+        right: 15px;
+        transform: scaleY(1);
+        transition: transform 0.2s ease;
+      }
+      &.open > a:after { transform: scaleY(-1); }
+    }
   }
   a {
     display: block;
@@ -109,9 +119,19 @@ nav {
         transform-origin: top;
         transition: transform 0.2s ease;
       }
-      &:hover ul {
-        transform: scaleY(1);
-        visibility: visible;
+      &:hover {
+        ul {
+          transform: scaleY(1);
+          visibility: visible;
+        }
+        &.dropdown > a:after { transform: rotate(90deg); }
+      }
+      &.dropdown {
+        &> a:after {
+          content: '>';
+          transform: rotate(0deg);
+          transition: transform 0.2s ease;
+        }
       }
     }
   }
@@ -122,8 +142,11 @@ nav {
 }
 
 .no-flexbox {
-  nav li ul {
-    left: 0;
-    top: auto;
+  nav li {
+    ul {
+      left: 0;
+      top: auto;
+    }
+    &.dropdown > a:after { content: 'V'; }
   }
 }

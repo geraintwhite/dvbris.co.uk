@@ -3,14 +3,14 @@ module.exports = function(grunt) {
 
     sass: {
       main: {
-        src: 'main.scss',
-        dest: 'main.css'
+        src: 'css/main.scss',
+        dest: 'css/main.css'
       }
     },
     autoprefixer: {
       main: {
-        src: 'main.css',
-        dest: 'main.css'
+        src: 'css/main.css',
+        dest: 'css/main.css'
       }
     },
     watch: {
