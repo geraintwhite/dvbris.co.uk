@@ -46,6 +46,7 @@ header {
     max-width: 466px;
     max-height: 112px; }
   header h2 {
+    font-family: "Andale Mono", AndaleMono, Consolas, monospace;
     margin-bottom: 0; }
 
 footer, header {
