@@ -58,6 +58,7 @@ nav {
       display: none;
     }
     &:hover { background-color: #3c3c3c; }
+    &.dropdown > a:after { content: 'V'; position: absolute; right: 15px; }
   }
   a {
     display: block;
@@ -106,6 +107,7 @@ nav {
         transform: scaleY(1);
         visibility: visible;
       }
+      &.dropdown > a:after { content: '>'; }
     }
   }
   #wrapper {

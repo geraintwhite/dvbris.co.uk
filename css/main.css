@@ -65,6 +65,10 @@ nav {
       display: none; }
     nav li:hover {
       background-color: #3c3c3c; }
+    nav li.dropdown > a:after {
+      content: 'V';
+      position: absolute;
+      right: 15px; }
   nav a {
     display: block;
     padding: 10px 15px;
@@ -116,6 +120,8 @@ nav {
       -ms-transform: scaleY(1);
       transform: scaleY(1);
       visibility: visible; }
+    .desktop nav li.dropdown > a:after {
+      content: '>'; }
 .desktop #wrapper {
   -webkit-box-flex: 1;
   -webkit-flex: 1 0px;
