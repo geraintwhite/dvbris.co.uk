@@ -63,12 +63,21 @@ nav {
       position: relative;
       background-color: #505050;
       display: none; }
-    nav li:hover {
+    nav li:hover, nav li.dropdown.open {
       background-color: #3c3c3c; }
     nav li.dropdown > a:after {
       content: 'V';
       position: absolute;
-      right: 15px; }
+      right: 15px;
+      -webkit-transform: scaleY(1);
+      -ms-transform: scaleY(1);
+      transform: scaleY(1);
+      -webkit-transition: -webkit-transform 0.2s ease;
+      transition: transform 0.2s ease; }
+    nav li.dropdown.open > a:after {
+      -webkit-transform: scaleY(-1);
+      -ms-transform: scaleY(-1);
+      transform: scaleY(-1); }
   nav a {
     display: block;
     padding: 10px 15px;

@@ -57,8 +57,17 @@ nav {
       background-color: $bg-colour;
       display: none;
     }
-    &:hover { background-color: #3c3c3c; }
-    &.dropdown > a:after { content: 'V'; position: absolute; right: 15px; }
+    &:hover, &.dropdown.open { background-color: #3c3c3c; }
+    &.dropdown {
+      &> a:after {
+        content: 'V';
+        position: absolute;
+        right: 15px;
+        transform: scaleY(1);
+        transition: transform 0.2s ease;
+      }
+      &.open > a:after { transform: scaleY(-1); }
+    }
   }
   a {
     display: block;
