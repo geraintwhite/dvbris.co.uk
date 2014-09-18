@@ -150,3 +150,5 @@ nav {
 .no-flexbox nav li ul {
   left: 0;
   top: auto; }
+.no-flexbox nav li.dropdown > a:after {
+  content: 'V'; }

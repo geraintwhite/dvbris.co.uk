@@ -135,8 +135,11 @@ nav {
 }
 
 .no-flexbox {
-  nav li ul {
-    left: 0;
-    top: auto;
+  nav li {
+    ul {
+      left: 0;
+      top: auto;
+    }
+    &.dropdown > a:after { content: 'V'; }
   }
 }
