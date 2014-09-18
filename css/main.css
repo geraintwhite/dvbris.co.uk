@@ -1,18 +1,18 @@
 html {
   -moz-box-sizing: border-box;
-       box-sizing: border-box; }
+  box-sizing: border-box; }
 
 *, *:before, *:after {
   -moz-box-sizing: inherit;
-       box-sizing: inherit; }
+  box-sizing: inherit; }
 
 img {
   -moz-box-sizing: content-box;
-       box-sizing: content-box; }
+  box-sizing: content-box; }
 
 body {
   font-family: sans-serif;
-  background: #505050 url(images/bg.png) repeat-x;
+  background: #505050 url(../images/bg.png) repeat-x;
   color: #fff; }
   body a {
     color: #ababab;
@@ -26,14 +26,14 @@ body {
   display: -ms-flexbox;
   display: flex;
   -webkit-flex-flow: row wrap;
-      -ms-flex-flow: row wrap;
-          flex-flow: row wrap; }
+  -ms-flex-flow: row wrap;
+  flex-flow: row wrap; }
 
 header, footer, header, nav, #wrapper {
   -webkit-box-flex: 1;
   -webkit-flex: 1 100%;
-      -ms-flex: 1 100%;
-          flex: 1 100%; }
+  -ms-flex: 1 100%;
+  flex: 1 100%; }
 
 header {
   font-size: 1.2em; }
@@ -91,8 +91,8 @@ nav {
 .desktop nav {
   -webkit-box-flex: 0;
   -webkit-flex: 0 150px;
-      -ms-flex: 0 150px;
-          flex: 0 150px; }
+  -ms-flex: 0 150px;
+  flex: 0 150px; }
   .desktop nav ul {
     text-align: left; }
   .desktop nav li {
@@ -104,23 +104,23 @@ nav {
       display: block !important;
       visibility: hidden;
       -webkit-transform: scaleY(0);
-          -ms-transform: scaleY(0);
-              transform: scaleY(0);
+      -ms-transform: scaleY(0);
+      transform: scaleY(0);
       -webkit-transform-origin: top;
-          -ms-transform-origin: top;
-              transform-origin: top;
+      -ms-transform-origin: top;
+      transform-origin: top;
       -webkit-transition: -webkit-transform 0.2s ease;
-              transition: transform 0.2s ease; }
+      transition: transform 0.2s ease; }
     .desktop nav li:hover ul {
       -webkit-transform: scaleY(1);
-          -ms-transform: scaleY(1);
-              transform: scaleY(1);
+      -ms-transform: scaleY(1);
+      transform: scaleY(1);
       visibility: visible; }
 .desktop #wrapper {
   -webkit-box-flex: 1;
   -webkit-flex: 1 0px;
-      -ms-flex: 1 0px;
-          flex: 1 0px;
+  -ms-flex: 1 0px;
+  flex: 1 0px;
   box-shadow: #404040 0 0 100px; }
 
 .no-flexbox nav li ul {
