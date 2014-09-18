@@ -9,10 +9,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/normalize/3.0.1/normalize.min.css">
 <link rel="stylesheet" href="../main.css">
-<link rel="stylesheet" href="lightbox/css/lightbox.css">
-<script src="lightbox/js/jquery-1.11.0.min.js"></script>
-<script src="lightbox/js/lightbox.min.js"></script>
-<script src="main.js"></script>
+<link rel="stylesheet" href="../lightbox/css/lightbox.css">
+<script src="../lightbox/js/jquery-1.11.0.min.js"></script>
+<script src="../lightbox/js/lightbox.min.js"></script>
+<script src="../main.js"></script>
 <!--[if lt IE 9]>
   <script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.2/modernizr.min.js"></script>
   <![endif]-->
@@ -25,32 +25,32 @@
       <h2><!-- TemplateBeginEditable name="Title" -->Narrowboats and Canals<!-- TemplateEndEditable --></h2>
     </header>
     <nav><ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="about.html">About Us</a></li>
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="../about.html">About Us</a></li>
       <li><a>Photos</a><ul>
-        <li><a href="outside_photos.html">Outside</a></li>
-        <li><a href="inside_photos.html">Inside</a></li>
+        <li><a href="../outside_photos.html">Outside</a></li>
+        <li><a href="../inside_photos.html">Inside</a></li>
       </ul>
       </li>
       <li><a>On Holiday</a><ul>
-        <li><a href="hol_warwickshire.html">Warwickshire Ring</a></li>
-        <li><a href="hol_leicester.html">Leicester Section</a></li>
-        <li><a href="hol_grand_union_n.html">Grand Union North</a></li>
-        <li><a href="hol_grand_union_s.html">Grand Union South</a></li>
+        <li><a href="../hol_warwickshire.html">Warwickshire Ring</a></li>
+        <li><a href="../hol_leicester.html">Leicester Section</a></li>
+        <li><a href="../hol_grand_union_n.html">Grand Union North</a></li>
+        <li><a href="../hol_grand_union_s.html">Grand Union South</a></li>
       </ul>
       </li>
-      <li><a href="stretch.html">Stretch Job</a></li>
+      <li><a href="../stretch.html">Stretch Job</a></li>
       <li><a>Paint Jobs</a><ul>
-        <li><a href="painting1.html">Paint Job One</a></li>
-        <li><a href="painting2.html">Paint Job Two</a></li>
+        <li><a href="../painting1.html">Paint Job One</a></li>
+        <li><a href="../painting2.html">Paint Job Two</a></li>
       </ul>
       </li>
-      <li><a href="links.html">Links</a></li>
-      <li><a href="feedback.html">Feedback</a></li>
+      <li><a href="../links.html">Links</a></li>
+      <li><a href="../feedback.html">Feedback</a></li>
     </ul></nav>
     <div id="wrapper">
       <div id="content"><!-- TemplateBeginEditable name="Body" -->Content goes here.<!-- TemplateEndEditable --></div>
-      <div id="content_footer"><!-- TemplateBeginIf cond="Footer" --><!-- TemplateBeginEditable name="Footer" -->Footer<!-- TemplateEndEditable --><!-- TemplateEndIf --></div>
+      <div id="content_footer"><!-- TemplateBeginIf cond="Footer" --><!-- TemplateBeginEditable name="Footer" --><!-- TemplateEndEditable --><!-- TemplateEndIf --></div>
     </div>
     <footer>
       <p>Website created by <a href="http://geraintwhite.co.uk">Geraint White</a></p>
