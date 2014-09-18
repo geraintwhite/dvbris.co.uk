@@ -27,10 +27,17 @@ header {
   @extend footer;
   font-size: 1.2em;
   h1 {
-    font-family: serif;
-    font-size: 3em;
-    color: maroon;
-    text-shadow: gold 3px 3px;
+    margin: 0;
+    padding: 0;
+  }
+  .logo {
+    width: 100%;
+    height: auto;
+    max-width: 466px;
+    max-height: 112px;
+  }
+  h2 {
+    margin-bottom: 0;
   }
 }
 
