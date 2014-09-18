@@ -29,6 +29,11 @@ $(function() {
 
   $(window).resize(function() {
     $('body').toggleClass(desktop_class, isDesktop());
+
+    if (isDesktop()) {
+      $(dropdown).removeClass(open_class);
+      $(dropdown_ul).hide();
+    }
   });
 
   $(window).resize();
