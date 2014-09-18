@@ -129,8 +129,17 @@ nav {
       -ms-transform: scaleY(1);
       transform: scaleY(1);
       visibility: visible; }
+    .desktop nav li:hover.dropdown > a:after {
+      -webkit-transform: rotate(90deg);
+      -ms-transform: rotate(90deg);
+      transform: rotate(90deg); }
     .desktop nav li.dropdown > a:after {
-      content: '>'; }
+      content: '>';
+      -webkit-transform: rotate(0deg);
+      -ms-transform: rotate(0deg);
+      transform: rotate(0deg);
+      -webkit-transition: -webkit-transform 0.2s ease;
+      transition: transform 0.2s ease; }
 .desktop #wrapper {
   -webkit-box-flex: 1;
   -webkit-flex: 1 0px;

@@ -112,11 +112,20 @@ nav {
         transform-origin: top;
         transition: transform 0.2s ease;
       }
-      &:hover ul {
-        transform: scaleY(1);
-        visibility: visible;
+      &:hover {
+        ul {
+          transform: scaleY(1);
+          visibility: visible;
+        }
+        &.dropdown > a:after { transform: rotate(90deg); }
       }
-      &.dropdown > a:after { content: '>'; }
+      &.dropdown {
+        &> a:after {
+          content: '>';
+          transform: rotate(0deg);
+          transition: transform 0.2s ease;
+        }
+      }
     }
   }
   #wrapper {
