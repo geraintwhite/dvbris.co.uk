@@ -6,10 +6,9 @@ $(function() {
   $(document).click(function(e) {
     var target = $(e.target).parent();
     if (!isDesktop()) {
-      if (target.is($('nav li').has('ul'))) {
+      $('nav li ul').slideUp();
+      if (target.is('nav li:has(ul)')) {
         target.find('ul').slideToggle();
-      } else {
-        $('nav li ul').slideUp();
       }
     }
   })
