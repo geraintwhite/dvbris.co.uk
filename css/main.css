@@ -156,4 +156,6 @@ nav {
   left: 0;
   top: auto; }
 .no-flexbox nav li.dropdown > a:after {
-  content: 'V'; }
+  content: 'V';
+  right: auto;
+  margin-left: 15px; }

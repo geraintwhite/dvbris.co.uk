@@ -147,6 +147,6 @@ nav {
       left: 0;
       top: auto;
     }
-    &.dropdown > a:after { content: 'V'; }
+    &.dropdown > a:after { content: 'V'; right: auto; margin-left: 15px; }
   }
 }
