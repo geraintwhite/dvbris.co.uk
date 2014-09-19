@@ -1,0 +1,5 @@
+{
+  "grunt": true,
+  "output": "/var/www/projects/dvbris.com",
+  "url": "http://pi.dvbris.com/projects/dvbris.co.uk"
+}
