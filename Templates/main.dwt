@@ -22,7 +22,7 @@
       <h1><img src="../images/dvbris.svg" alt="Dvbris" class="logo"></h1>
       <h2><!-- TemplateBeginEditable name="Title" -->Narrowboats and Canals<!-- TemplateEndEditable --></h2>
     </header>
-    <nav><ul>
+    <nav><li class="nav-toggle dropdown"><a>Navigation</a></li><ul>
       <li><a href="../index.html">Home</a></li>
       <li><a href="../about.html">About Us</a></li>
       <li class="dropdown"><a>Photos</a><ul>
@@ -48,7 +48,7 @@
     </ul></nav>
     <div id="wrapper">
       <div id="content"><!-- TemplateBeginEditable name="Body" -->Content goes here.<!-- TemplateEndEditable --></div>
-      <div id="content_footer"><!-- TemplateBeginIf cond="Footer" --><!-- TemplateBeginEditable name="Footer" --><!-- TemplateEndEditable --><!-- TemplateEndIf --></div>
+      <div id="content-footer"><!-- TemplateBeginIf cond="Footer" --><!-- TemplateBeginEditable name="Footer" --><!-- TemplateEndEditable --><!-- TemplateEndIf --></div>
     </div>
     <footer>
       <p>Website created by <a href="http://geraintwhite.co.uk">Geraint White</a></p>
