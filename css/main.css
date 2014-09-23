@@ -161,31 +161,12 @@ nav {
   content: ''; }
 
 .thumb_grid {
+  text-align: center;
   list-style: none;
   padding: 0; }
   .thumb_grid li {
     display: inline-block;
-    text-align: center;
-    width: 200px; }
+    width: 200px;
+    margin: 2px; }
     .thumb_grid li img {
-      max-width: 150px; }
-    @media (min-width: 0) {
-      .thumb_grid li {
-        width: 99%;
-        margin: 0.5%; } }
-    @media (min-width: 720px) {
-      .thumb_grid li {
-        width: 48%;
-        margin: 0.5%; } }
-    @media (min-width: 850px) {
-      .thumb_grid li {
-        width: 30.33333%;
-        margin: 0.5%; } }
-    @media (min-width: 1024px) {
-      .thumb_grid li {
-        width: 21%;
-        margin: 0.5%; } }
-    @media (min-width: 1280px) {
-      .thumb_grid li {
-        width: 15%;
-        margin: 0.5%; } }
+      max-width: 100%; }

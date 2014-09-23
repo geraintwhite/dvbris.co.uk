@@ -154,21 +154,13 @@ nav {
 }
 
 .thumb_grid {
+  text-align: center;
   list-style: none;
   padding: 0;
   li {
-    img { max-width: 150px; }
+    img { max-width: 100%; }
     display: inline-block;
-    text-align: center;
     width: 200px;
-    @mixin columns($col) {
-      width: (100% / $col) - $col;
-      margin: 0.5%;
-    }
-    @media (min-width: 0) { @include columns(1); }
-    @media (min-width: 720px) { @include columns(2); }
-    @media (min-width: 850px) { @include columns(3); }
-    @media (min-width: 1024px) { @include columns(4); }
-    @media (min-width: 1280px) { @include columns(5); }
+    margin: 2px;
   }
 }
