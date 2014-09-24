@@ -229,6 +229,8 @@ nav {
       color: red; }
     #contact #msg.success {
       color: green; }
+  #contact textarea {
+    height: 150px; }
   #contact label, #contact input, #contact textarea {
     display: block;
     width: 100%;
