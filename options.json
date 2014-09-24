@@ -2,7 +2,7 @@
   "grunt": true,
   "email": [
     "mail@geraintwhite.co.uk"
-  ]
+  ],
   "hosts": {
     "raspberrypi": {
       "output": "/var/www/projects/dvbris.co.uk",
