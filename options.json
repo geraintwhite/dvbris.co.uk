@@ -1,5 +1,16 @@
 {
   "grunt": true,
-  "output": "/var/www/projects/dvbris.co.uk",
-  "url": "http://pi.dvbris.com/projects/dvbris.co.uk"
+  "email": [
+    "mail@geraintwhite.co.uk"
+  ]
+  "hosts": {
+    "raspberrypi": {
+      "output": "/var/www/projects/dvbris.co.uk",
+      "url": "http://pi.dvbris.com/projects/dvbris.co.uk"
+    },
+    "geraint-vps": {
+      "output": "/var/www/dvbris.co.uk",
+      "url": "http://dvbris.co.uk"
+    }
+  }
 }
