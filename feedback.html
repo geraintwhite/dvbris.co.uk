@@ -14,7 +14,7 @@
 <script src="js/jquery-1.11.0.min.js"></script>
 <script src="js/lightbox.min.js"></script>
 <script src="js/main.js"></script>
-<!-- InstanceBeginEditable name="head" --><!-- InstanceEndEditable --><!-- InstanceParam name="Footer" type="boolean" value="false" -->
+<!-- InstanceBeginEditable name="head" --><!-- InstanceEndEditable --><!-- InstanceParam name="Footer" type="boolean" value="true" -->
 </head>
 <body>
   <div id="container">
@@ -47,26 +47,43 @@
       <li><a href="feedback.html">Feedback</a></li>
     </ul></nav>
     <div id="wrapper">
-      <div id="content"><!-- InstanceBeginEditable name="Body" --><form action="http://dvbris.co.uk/feedback.php" method="post">
-<table border="0" align="center" cellpadding="8" cellspacing="8" summary="feedback form">
-<tr><td><label for="tswname">Name</label>:</td><td><input type="text" name="fullname" id="tswname" size="25" /></td></tr>
-<tr>
-  <td>Boat Name:</td>
-  <td><input type="text" name="boatname" id="tswboatname" size="25" /></td>
-</tr>
-<tr><td><label for="tswemail">Email address</label>:</td><td><input type="text" id="tswemail" name="email" size="25" /></td></tr>
-<tr>
-<td colspan="2">
-<label for="tswcomments">Comments</label><br />
-<textarea rows="15" cols="45" name="comments" id="tswcomments"></textarea></td>
-</tr>
-<tr>
-<td align="center" colspan="2">
-<input type="submit" value="Send Feedback" /><br /></td>
-</tr>
-</table>
-</form><!-- InstanceEndEditable --></div>
-      <div id="content-footer"></div>
+      <div id="content"><!-- InstanceBeginEditable name="Body" -->
+        <form action="mail.php" method="post" id="contact">
+          <div id="msg"></div>
+          <label for="name">Name: </label><input type="text" name="name" id="name" required>
+          <label for="email">Email address: </label><input type="email" name="email" id="email" required>
+          <label for="message">Comments: </label>
+          <textarea name="message" id="message" required></textarea>
+          <input type="submit" value="Send Feedback">
+        </form>
+      <!-- InstanceEndEditable --></div>
+      <div id="content-footer"><script>
+        $(function() {
+          var form = $('#contact');
+          var msg = $('#msg');
+
+          form.submit(function(e) {
+            e.preventDefault();
+            msg.removeClass('error success');
+            $.ajax({
+              type: 'POST',
+              url: form.attr('action'),
+              data: form.serialize()
+            })
+            .done(function(response) {
+              msg.addClass('success');
+              msg.text(response);
+              $('#name').val('');
+              $('#email').val('');
+              $('#message').val('');
+            })
+            .fail(function(data) {
+              msg.addClass('error');
+              msg.text(data.responseText ? data.responseText : 'Oops! An error occured and your message could not be sent.');
+            });
+          });
+        });
+      </script></div>
     </div>
     <footer>
       <p>Website created by <a href="http://geraintwhite.co.uk">Geraint White</a></p>

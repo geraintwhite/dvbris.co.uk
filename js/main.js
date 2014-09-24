@@ -17,7 +17,6 @@ $(function() {
   $(document).click(function(e) {
     var target = $(e.target).parent();
     var target_ul = target.children('ul');
-    console.log(target)
 
     if (!isDesktop()) {
       $(dropdown).not(target).removeClass(open_class);

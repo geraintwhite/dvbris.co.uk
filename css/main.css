@@ -218,3 +218,18 @@ nav {
     opacity: 1; }
   .img-caption:hover:before {
     opacity: 0; }
+
+#contact {
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 10px; }
+  #contact #msg {
+    margin-bottom: 20px; }
+    #contact #msg.error {
+      color: red; }
+    #contact #msg.success {
+      color: green; }
+  #contact label, #contact input, #contact textarea {
+    display: block;
+    width: 100%;
+    margin: 10px 0; }
