@@ -38,7 +38,7 @@ header {
   }
   h2 {
     margin-bottom: 0;
-    font-family: "Andale Mono", AndaleMono, Consolas, monospace;
+    font-family: 'Andale Mono', AndaleMono, Consolas, monospace;
     font-weight: normal;
   }
 }
@@ -111,8 +111,8 @@ nav {
   }
   nav {
     flex: 0 $nav-width;
-    ul { text-align: left; }
     li {
+      text-align: left;
       width: $nav-width;
       ul {
         top: 0;

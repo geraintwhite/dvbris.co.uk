@@ -47,7 +47,7 @@ header {
     max-height: 112px; }
   header h2 {
     margin-bottom: 0;
-    font-family: "Andale Mono", AndaleMono, Consolas, monospace;
+    font-family: 'Andale Mono', AndaleMono, Consolas, monospace;
     font-weight: normal; }
 
 footer, header {
@@ -114,9 +114,8 @@ nav {
   -webkit-flex: 0 150px;
   -ms-flex: 0 150px;
   flex: 0 150px; }
-  .desktop nav ul {
-    text-align: left; }
   .desktop nav li {
+    text-align: left;
     width: 150px; }
     .desktop nav li ul {
       top: 0;
