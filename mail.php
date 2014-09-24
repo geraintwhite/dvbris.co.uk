@@ -11,8 +11,8 @@
             exit;
         }
 
-        $recipient = "mail@geraintwhite.co.uk";
-        $subject = "New contact from $name";
+        $recipient = "hughwhite65@talktalk.net";
+        $subject = "Message received from $name";
         $email_content = "Name: $name\n";
         $email_content .= "Email: $email\n\n";
         $email_content .= "Message:\n$message\n";
