@@ -59,16 +59,12 @@ nav {
     padding: 0;
     list-style: none;
     display: none; }
-  nav li {
+  nav li, nav .nav-toggle {
     text-align: center;
     position: relative;
     display: inline-block;
     cursor: pointer;
     width: 100%; }
-    nav li ul {
-      position: relative;
-      background-color: #505050;
-      display: none; }
   nav .dropdown > a:after {
     content: 'V';
     position: absolute;
@@ -84,6 +80,10 @@ nav {
       -webkit-transform: scaleY(-1);
           -ms-transform: scaleY(-1);
               transform: scaleY(-1); }
+  nav .dropdown ul {
+    position: relative;
+    background-color: #505050;
+    display: none; }
   nav a {
     display: block;
     padding: 10px 15px; }
@@ -113,20 +113,6 @@ nav {
   .desktop nav li {
     text-align: left;
     width: 150px; }
-    .desktop nav li ul {
-      top: 0;
-      left: 150px;
-      position: absolute;
-      display: block !important;
-      visibility: hidden;
-      -webkit-transform: scaleY(0);
-          -ms-transform: scaleY(0);
-              transform: scaleY(0);
-      -webkit-transform-origin: top;
-          -ms-transform-origin: top;
-              transform-origin: top;
-      -webkit-transition: -webkit-transform 0.2s ease;
-              transition: transform 0.2s ease; }
     .desktop nav li:hover ul {
       -webkit-transform: scaleY(1);
           -ms-transform: scaleY(1);
@@ -143,6 +129,20 @@ nav {
             transform: rotate(0deg);
     -webkit-transition: -webkit-transform 0.2s ease;
             transition: transform 0.2s ease; }
+  .desktop nav .dropdown ul {
+    top: 0;
+    left: 150px;
+    position: absolute;
+    display: block !important;
+    visibility: hidden;
+    -webkit-transform: scaleY(0);
+        -ms-transform: scaleY(0);
+            transform: scaleY(0);
+    -webkit-transform-origin: top;
+        -ms-transform-origin: top;
+            transform-origin: top;
+    -webkit-transition: -webkit-transform 0.2s ease;
+            transition: transform 0.2s ease; }
   .desktop nav .nav-toggle {
     display: none; }
 .desktop #wrapper {
@@ -151,10 +151,10 @@ nav {
           flex: 1 0px;
   box-shadow: #404040 0 0 100px; }
 
-.no-flexbox nav li ul {
+.no-flexbox nav .dropdown ul {
   left: 0;
   top: auto; }
-.no-flexbox nav li.dropdown > a:after {
+.no-flexbox nav .dropdown > a:after {
   content: ''; }
 
 .thumb-grid {

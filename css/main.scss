@@ -56,17 +56,12 @@ nav {
     list-style: none;
     display: none;
   }
-  li {
+  li, .nav-toggle {
     text-align: center;
     position: relative;
     display: inline-block;
     cursor: pointer;
     width: 100%;
-    ul {
-      position: relative;
-      background-color: $bg-colour;
-      display: none;
-    }
   }
   .dropdown {
     &> a:after {
@@ -79,6 +74,11 @@ nav {
     &.open {
       background-color: #3c3c3c;
       &> a:after { transform: scaleY(-1); }
+    }
+    ul {
+      position: relative;
+      background-color: $bg-colour;
+      display: none;
     }
   }
   a {
@@ -113,16 +113,6 @@ nav {
     li {
       text-align: left;
       width: $nav-width;
-      ul {
-        top: 0;
-        left: $nav-width;
-        position: absolute;
-        display: block !important;
-        visibility: hidden;
-        transform: scaleY(0);
-        transform-origin: top;
-        transition: transform 0.2s ease;
-      }
       &:hover {
         ul {
           transform: scaleY(1);
@@ -138,6 +128,16 @@ nav {
         transform: rotate(0deg);
         transition: transform 0.2s ease;
       }
+      ul {
+        top: 0;
+        left: $nav-width;
+        position: absolute;
+        display: block !important;
+        visibility: hidden;
+        transform: scaleY(0);
+        transform-origin: top;
+        transition: transform 0.2s ease;
+      }
     }
     .nav-toggle { display: none; }
   }
@@ -148,12 +148,12 @@ nav {
 }
 
 .no-flexbox {
-  nav li {
+  nav .dropdown {
     ul {
       left: 0;
       top: auto;
     }
-    &.dropdown > a:after { content: ''; }
+    &> a:after { content: ''; }
   }
 }
 
