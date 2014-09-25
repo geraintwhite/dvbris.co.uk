@@ -1,14 +1,14 @@
 html {
   -moz-box-sizing: border-box;
-  box-sizing: border-box; }
+       box-sizing: border-box; }
 
 *, *:before, *:after {
   -moz-box-sizing: inherit;
-  box-sizing: inherit; }
+       box-sizing: inherit; }
 
 img {
   -moz-box-sizing: content-box;
-  box-sizing: content-box; }
+       box-sizing: content-box; }
 
 body {
   font-family: sans-serif;
@@ -21,19 +21,17 @@ body {
       color: #fff; }
 
 #container {
-  display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-flex-flow: row wrap;
-  -ms-flex-flow: row wrap;
-  flex-flow: row wrap; }
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap; }
 
 header, footer, header, nav, #wrapper {
-  -webkit-box-flex: 1;
   -webkit-flex: 1 100%;
-  -ms-flex: 1 100%;
-  flex: 1 100%; }
+      -ms-flex: 1 100%;
+          flex: 1 100%; }
 
 header {
   font-size: 1.2em; }
@@ -76,20 +74,19 @@ nav {
     position: absolute;
     right: 15px;
     -webkit-transform: scaleY(1);
-    -ms-transform: scaleY(1);
-    transform: scaleY(1);
+        -ms-transform: scaleY(1);
+            transform: scaleY(1);
     -webkit-transition: -webkit-transform 0.2s ease;
-    transition: transform 0.2s ease; }
+            transition: transform 0.2s ease; }
   nav .dropdown.open, .desktop nav li:hover {
     background-color: #3c3c3c; }
     nav .dropdown.open > a:after, .desktop nav li:hover > a:after {
       -webkit-transform: scaleY(-1);
-      -ms-transform: scaleY(-1);
-      transform: scaleY(-1); }
+          -ms-transform: scaleY(-1);
+              transform: scaleY(-1); }
   nav a {
     display: block;
-    padding: 10px 15px;
-    width: 100%; }
+    padding: 10px 15px; }
 
 #wrapper {
   color: #000;
@@ -110,10 +107,9 @@ nav {
   text-align: left;
   padding-left: 165px; }
 .desktop nav {
-  -webkit-box-flex: 0;
   -webkit-flex: 0 150px;
-  -ms-flex: 0 150px;
-  flex: 0 150px; }
+      -ms-flex: 0 150px;
+          flex: 0 150px; }
   .desktop nav li {
     text-align: left;
     width: 150px; }
@@ -124,36 +120,35 @@ nav {
       display: block !important;
       visibility: hidden;
       -webkit-transform: scaleY(0);
-      -ms-transform: scaleY(0);
-      transform: scaleY(0);
+          -ms-transform: scaleY(0);
+              transform: scaleY(0);
       -webkit-transform-origin: top;
-      -ms-transform-origin: top;
-      transform-origin: top;
+          -ms-transform-origin: top;
+              transform-origin: top;
       -webkit-transition: -webkit-transform 0.2s ease;
-      transition: transform 0.2s ease; }
+              transition: transform 0.2s ease; }
     .desktop nav li:hover ul {
       -webkit-transform: scaleY(1);
-      -ms-transform: scaleY(1);
-      transform: scaleY(1);
+          -ms-transform: scaleY(1);
+              transform: scaleY(1);
       visibility: visible; }
   .desktop nav .dropdown:hover > a:after {
     -webkit-transform: rotate(90deg);
-    -ms-transform: rotate(90deg);
-    transform: rotate(90deg); }
+        -ms-transform: rotate(90deg);
+            transform: rotate(90deg); }
   .desktop nav .dropdown > a:after {
     content: '>';
     -webkit-transform: rotate(0deg);
-    -ms-transform: rotate(0deg);
-    transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+            transform: rotate(0deg);
     -webkit-transition: -webkit-transform 0.2s ease;
-    transition: transform 0.2s ease; }
+            transition: transform 0.2s ease; }
   .desktop nav .nav-toggle {
     display: none; }
 .desktop #wrapper {
-  -webkit-box-flex: 1;
   -webkit-flex: 1 0px;
-  -ms-flex: 1 0px;
-  flex: 1 0px;
+      -ms-flex: 1 0px;
+          flex: 1 0px;
   box-shadow: #404040 0 0 100px; }
 
 .no-flexbox nav li ul {
@@ -191,7 +186,7 @@ nav {
     color: white;
     opacity: 0;
     -webkit-transition: all 0.6s ease;
-    transition: all 0.6s ease; }
+            transition: all 0.6s ease; }
     .img-caption p a:hover {
       color: white !important; }
   .img-caption:before {
@@ -210,7 +205,7 @@ nav {
     font-size: 14px;
     line-height: 24px;
     -webkit-transition: all 0.6s ease;
-    transition: all 0.6s ease;
+            transition: all 0.6s ease;
     opacity: 0.75; }
   .img-caption:hover p {
     bottom: 0;
