@@ -4,7 +4,7 @@
     "mail@geraintwhite.co.uk"
   ],
   "hosts": {
-    "raspberrypi": {
+    "k9": {
       "output": "/var/www/projects/dvbris.co.uk",
       "url": "http://pi.dvbris.com/projects/dvbris.co.uk"
     },
