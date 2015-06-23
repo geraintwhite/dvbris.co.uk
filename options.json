@@ -1,15 +1,15 @@
 {
-  "grunt": true,
+  "start_cmd": ["npm install", "./node_modules/.bin/grunt"],
   "email": [
     "mail@geraintwhite.co.uk"
   ],
   "hosts": {
     "k9": {
-      "output": "/var/www/projects/dvbris.co.uk",
+      "copy_to": "/var/www/projects/dvbris.co.uk",
       "url": "http://pi.dvbris.com/projects/dvbris.co.uk"
     },
     "geraint-vps": {
-      "output": "/var/www/dvbris.co.uk",
+      "copy_to": "/var/www/dvbris.co.uk",
       "url": "http://dvbris.co.uk"
     }
   }
