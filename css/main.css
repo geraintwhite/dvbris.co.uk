@@ -1,14 +1,11 @@
 html {
-  -moz-box-sizing: border-box;
-       box-sizing: border-box; }
+  box-sizing: border-box; }
 
 *, *:before, *:after {
-  -moz-box-sizing: inherit;
-       box-sizing: inherit; }
+  box-sizing: inherit; }
 
 img {
-  -moz-box-sizing: content-box;
-       box-sizing: content-box; }
+  box-sizing: content-box; }
 
 body {
   font-family: sans-serif;
@@ -21,6 +18,7 @@ body {
       color: #fff; }
 
 #container {
+  display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
@@ -29,6 +27,7 @@ body {
           flex-flow: row wrap; }
 
 header, footer, header, nav, #wrapper {
+  -webkit-box-flex: 1;
   -webkit-flex: 1 100%;
       -ms-flex: 1 100%;
           flex: 1 100%; }
@@ -103,10 +102,13 @@ nav {
   min-height: 100vh;
   max-width: 1280px;
   margin: 0 auto; }
+
 .desktop header {
   text-align: left;
   padding-left: 165px; }
+
 .desktop nav {
+  -webkit-box-flex: 0;
   -webkit-flex: 0 150px;
       -ms-flex: 0 150px;
           flex: 0 150px; }
@@ -145,7 +147,9 @@ nav {
             transition: transform 0.2s ease; }
   .desktop nav .nav-toggle {
     display: none; }
+
 .desktop #wrapper {
+  -webkit-box-flex: 1;
   -webkit-flex: 1 0px;
       -ms-flex: 1 0px;
           flex: 1 0px;
@@ -154,6 +158,7 @@ nav {
 .no-flexbox nav .dropdown ul {
   left: 0;
   top: auto; }
+
 .no-flexbox nav .dropdown > a:after {
   content: ''; }
 

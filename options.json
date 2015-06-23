@@ -1,5 +1,5 @@
 {
-  "start_cmd": ["npm install", "./node_modules/.bin/grunt"],
+  "start_cmd": ["npm install", "npm run build"],
   "email": [
     "mail@geraintwhite.co.uk"
   ],
