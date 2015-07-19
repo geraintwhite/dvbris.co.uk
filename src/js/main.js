@@ -32,7 +32,7 @@ $(function() {
         $(nav_ul).slideToggle(anim_delay);
       }
     }
-  })
+  });
 
   $(window).resize(function() {
     $('body').toggleClass(desktop_class, isDesktop());
@@ -45,12 +45,17 @@ $(function() {
     }
   });
 
+  $('a[data-lightbox]').each(function() {
+    $(this).attr('data-title', $(this).siblings('p').html());
+  });
+
   if (!Modernizr.svg) {
     $('.logo').attr('src', 'images/dvbris.png');
   }
 
   $(window).resize();
 });
+
 
 (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

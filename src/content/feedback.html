@@ -1,0 +1,41 @@
+<!-- build:title -->Narrowboats and Canals. A Personal History of Narrowboat Dvbris<!-- /build:title -->
+<!-- build:heading -->Feedback<!-- /build:heading -->
+<!-- build:body -->
+<form action="mail.php" method="post" id="contact">
+  <div id="msg"></div>
+  <label for="name">Name: </label><input type="text" name="name" id="name" required>
+  <label for="email">Email address: </label><input type="email" name="email" id="email" required>
+  <label for="message">Comments: </label>
+  <textarea name="message" id="message" required></textarea>
+  <input type="submit" value="Send Feedback">
+</form>
+<!-- /build:body -->
+<!-- build:footer -->
+<script>
+  $(function() {
+    var form = $('#contact');
+    var msg = $('#msg');
+
+    form.submit(function(e) {
+      e.preventDefault();
+      msg.removeClass('error success');
+      $.ajax({
+        type: 'POST',
+        url: form.attr('action'),
+        data: form.serialize()
+      })
+      .done(function(response) {
+        msg.addClass('success');
+        msg.text(response);
+        $('#name').val('');
+        $('#email').val('');
+        $('#message').val('');
+      })
+      .fail(function(data) {
+        msg.addClass('error');
+        msg.text(data.responseText ? data.responseText : 'Oops! An error occured and your message could not be sent.');
+      });
+    });
+  });
+</script>
+<!-- /build:footer -->
