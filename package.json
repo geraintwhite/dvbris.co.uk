@@ -1,6 +1,6 @@
 {
   "name": "dvbris.co.uk",
-  "repository": "http://github.com/grit96/dvbris.co.uk.git",
+  "repository": "https://github.com/grit96/dvbris.co.uk.git",
   "version": "1.0.0",
   "scripts": {
     "build": "gulp"

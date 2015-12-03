@@ -7,11 +7,11 @@
   "hosts": {
     "k9": {
       "copy_to": "/var/www/projects/dvbris.co.uk",
-      "url": "http://pi.dvbris.com/projects/dvbris.co.uk"
+      "url": "https://pi.dvbris.com/projects/dvbris.co.uk"
     },
     "geraint-vps": {
       "copy_to": "/var/www/dvbris.co.uk",
-      "url": "http://dvbris.co.uk"
+      "url": "https://dvbris.co.uk"
     }
   }
 }
